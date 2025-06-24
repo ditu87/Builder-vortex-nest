@@ -62,6 +62,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        chat: {
+          primary: "hsl(var(--chat-primary))",
+          "primary-foreground": "hsl(var(--chat-primary-foreground))",
+          secondary: "hsl(var(--chat-secondary))",
+          "secondary-foreground": "hsl(var(--chat-secondary-foreground))",
+          user: "hsl(var(--chat-user))",
+          "user-foreground": "hsl(var(--chat-user-foreground))",
+          assistant: "hsl(var(--chat-assistant))",
+          "assistant-foreground": "hsl(var(--chat-assistant-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -85,10 +95,30 @@ export default {
             height: "0",
           },
         },
+        "fade-up": {
+          from: {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "pulse-dot": {
+          "0%, 80%, 100%": {
+            transform: "scale(0)",
+          },
+          "40%": {
+            transform: "scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-up": "fade-up 0.3s ease-out",
+        "pulse-dot": "pulse-dot 1.4s ease-in-out infinite both",
       },
     },
   },
